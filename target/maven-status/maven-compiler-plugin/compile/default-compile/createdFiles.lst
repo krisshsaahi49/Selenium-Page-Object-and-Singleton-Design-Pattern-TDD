@@ -1,0 +1,5 @@
+utilities/Singleton.class
+utilities/Base.class
+utilities/Homepage.class
+pages/HomePage.class
+pages/BaseClass.class
