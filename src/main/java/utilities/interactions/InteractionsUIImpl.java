@@ -1,14 +1,24 @@
 package utilities.interactions;
 
+import java.time.Duration;
+
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import utilities.Base;
 import utilities.Logs;
 
 public class InteractionsUIImpl implements Interactions {
-	
+
+	WebDriverWait wait;
+
 	Actions actions = new Actions(Base.getDriver());
+
+	JavascriptExecutor jsexec = (JavascriptExecutor) Base.getDriver();
 
 	@Override
 	public void click(WebElement element) {
@@ -32,9 +42,49 @@ public class InteractionsUIImpl implements Interactions {
 	public void navigate(String url) {
 		try {
 			Base.getDriver().navigate().to(url);
-			Logs.debug("Launched "+url+" successfully");
+			Logs.debug("Launched " + url + " successfully");
 		} catch (Exception e) {
 			Logs.error(e.getMessage());
+		}
+	}
+
+	@Override
+	public void sendkeys(WebElement element, String messsage) {
+		try {
+			element.sendKeys(messsage);
+			Logs.debug(" " + messsage + " is sent successfully");
+		} catch (Exception e) {
+			Logs.error(e.getMessage());
+		}
+
+	}
+
+	@Override
+	public void scroll(WebElement element) {
+		try {
+			jsexec.executeScript("arguments[0].scrollIntoView(true);", element);
+		} catch (Exception e) {
+			Logs.error(e.getMessage());
+		}
+	}
+
+	@Override
+	public void Wait(WebElement element) {
+		try {
+			wait = new WebDriverWait(Base.getDriver(), Duration.ofSeconds(10));
+			wait.until(ExpectedConditions.visibilityOf(element));
+		} catch (Exception e) {
+			Logs.error(e.getMessage());
+		}
+
+	}
+
+	@Override
+	public void verify(String expected, String actual) {
+		try {
+			Assert.assertEquals(expected.toLowerCase() , actual.toLowerCase());
+		} catch (Exception e) {
+			Logs.error(e.getMessage());;
 		}
 	}
 

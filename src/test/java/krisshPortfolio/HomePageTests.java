@@ -25,6 +25,13 @@ public class HomePageTests {
 		Thread.sleep(5000);
 	}
 	
+	@Test(groups = {"regression"})
+	public void test2() throws InterruptedException {
+		homepage.launch(PORTFOLIO);
+		homepage.sendemail("krisshsaahi@outlook.com", "Selenium Test", "Test from automation framework");
+		Thread.sleep(5000);
+	}
+	
 	@AfterTest
 	public void teardown() {
 		Base.end();

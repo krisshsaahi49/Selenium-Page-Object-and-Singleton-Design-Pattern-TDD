@@ -18,6 +18,20 @@ public class Homepage {
 	@FindBy(xpath = "//a[contains(text(),'Hire Me')]")
 	public WebElement Homepage_HireMe;
 	
+	@FindBy(css = "input#email")
+	public WebElement Homepage_email;
+	
+	@FindBy(css = "input#subject")
+	public WebElement Homepage_subject;
+	
+	@FindBy(css = "textarea#message")
+	public WebElement Homepage_message;
+	
+	@FindBy(css = "button[type*=submit]")
+	public WebElement Homepage_sendmessage;
+	
+	@FindBy(xpath = "//p[contains(text(),'Email sent successfully!')]")
+	public WebElement Homepage_confirmationmsg;
 	public void hireme() {
 		interactions.click(Homepage_HireMe);
 	}
@@ -26,6 +40,16 @@ public class Homepage {
 		interactions.navigate(url);
 	}
 
+	public void sendemail(String email, String subject, String message ) {
+		interactions.Wait(Homepage_email);
+		interactions.scroll(Homepage_email);
+		interactions.sendkeys(Homepage_email, email);
+		interactions.sendkeys(Homepage_subject, subject);
+		interactions.sendkeys(Homepage_message, message);
+		interactions.click(Homepage_sendmessage);
+		interactions.verify(Homepage_confirmationmsg.getText().toString(), "Email sent successfully!");
+		
+	}
 	public Homepage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 		interactions = new InteractionsUIImpl();

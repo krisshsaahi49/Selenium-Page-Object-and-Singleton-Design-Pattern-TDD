@@ -9,5 +9,13 @@ public interface Interactions {
 	void doubleclick(WebElement element);
 	
 	void navigate(String url);
+	
+	void sendkeys(WebElement element, String message);
+	
+	void scroll(WebElement element);
+	
+	void Wait(WebElement element);
+	
+	void verify(String expected, String actual);
 
 }
