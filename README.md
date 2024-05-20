@@ -7,6 +7,7 @@ This project demonstrates an automation framework built with Selenium and design
 | Component            | Technology        |
 |----------------------|-------------------|
 | Automation Framework | Selenium          |
+| Programming language | Java              |
 | Build Tool           | Maven             |
 | Version Control      | Git               |
 | Testing Framework    | TestNG            |
