@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-22T00:02:17 EDT" name="Surefire suite" finished-at="2024-05-22T00:02:30 EDT" duration-ms="13017">
+  <suite started-at="2024-05-22T00:22:35 EDT" name="Component Tests" finished-at="2024-05-22T00:22:50 EDT" duration-ms="14823">
     <groups>
       <group name="regression">
-        <method signature="HomePageTests.test1()[pri:0, instance:krisshPortfolio.HomePageTests@3c73951]" name="test1" class="krisshPortfolio.HomePageTests"/>
-        <method signature="HomePageTests.test2()[pri:0, instance:krisshPortfolio.HomePageTests@3c73951]" name="test2" class="krisshPortfolio.HomePageTests"/>
+        <method signature="HomePageTests.test1()[pri:0, instance:krisshPortfolio.HomePageTests@229c6181]" name="test1" class="krisshPortfolio.HomePageTests"/>
+        <method signature="HomePageTests.test2()[pri:0, instance:krisshPortfolio.HomePageTests@229c6181]" name="test2" class="krisshPortfolio.HomePageTests"/>
       </group> <!-- regression -->
     </groups>
-    <test started-at="2024-05-22T00:02:17 EDT" name="Surefire test" finished-at="2024-05-22T00:02:30 EDT" duration-ms="13017">
+    <test started-at="2024-05-22T00:22:35 EDT" name="a-t1" finished-at="2024-05-22T00:22:50 EDT" duration-ms="14823">
       <class name="krisshPortfolio.HomePageTests">
-        <test-method is-config="true" signature="init()[pri:0, instance:krisshPortfolio.HomePageTests@3c73951]" started-at="2024-05-22T00:02:17 EDT" name="init" finished-at="2024-05-22T00:02:19 EDT" duration-ms="1620" status="PASS">
+        <test-method is-config="true" signature="init()[pri:0, instance:krisshPortfolio.HomePageTests@229c6181]" started-at="2024-05-22T00:22:35 EDT" name="init" finished-at="2024-05-22T00:22:37 EDT" duration-ms="1632" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method signature="test1()[pri:0, instance:krisshPortfolio.HomePageTests@3c73951]" started-at="2024-05-22T00:02:19 EDT" name="test1" finished-at="2024-05-22T00:02:24 EDT" duration-ms="5769" status="PASS">
+        <test-method signature="test1()[pri:0, instance:krisshPortfolio.HomePageTests@229c6181]" started-at="2024-05-22T00:22:37 EDT" name="test1" finished-at="2024-05-22T00:22:43 EDT" duration-ms="5738" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test1 -->
-        <test-method signature="test2()[pri:0, instance:krisshPortfolio.HomePageTests@3c73951]" started-at="2024-05-22T00:02:24 EDT" name="test2" finished-at="2024-05-22T00:02:30 EDT" duration-ms="5496" status="PASS">
+        <test-method signature="test2()[pri:0, instance:krisshPortfolio.HomePageTests@229c6181]" started-at="2024-05-22T00:22:43 EDT" name="test2" finished-at="2024-05-22T00:22:50 EDT" duration-ms="7301" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test2 -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:krisshPortfolio.HomePageTests@3c73951]" started-at="2024-05-22T00:02:30 EDT" name="teardown" finished-at="2024-05-22T00:02:30 EDT" duration-ms="104" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:krisshPortfolio.HomePageTests@229c6181]" started-at="2024-05-22T00:22:50 EDT" name="teardown" finished-at="2024-05-22T00:22:50 EDT" duration-ms="118" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- krisshPortfolio.HomePageTests -->
-    </test> <!-- Surefire test -->
-  </suite> <!-- Surefire suite -->
+    </test> <!-- a-t1 -->
+  </suite> <!-- Component Tests -->
 </testng-results>
