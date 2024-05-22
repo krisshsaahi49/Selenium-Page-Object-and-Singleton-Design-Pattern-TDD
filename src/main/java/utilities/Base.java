@@ -4,6 +4,7 @@ import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.safari.SafariDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -27,8 +28,10 @@ public class Base extends Logs {
 			if (driver == null) {
 				switch (browser) {
 				case "GC":
+					ChromeOptions options = new ChromeOptions();
+					options.addArguments("--headless");
 					WebDriverManager.chromedriver().setup();
-					driver = new ChromeDriver();
+					driver = new ChromeDriver(options);
 					break;
 				case "SF":
 					WebDriverManager.safaridriver().setup();
