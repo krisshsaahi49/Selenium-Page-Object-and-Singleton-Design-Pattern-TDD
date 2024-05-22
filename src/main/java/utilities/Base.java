@@ -9,22 +9,22 @@ import org.openqa.selenium.safari.SafariDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Base extends Logs {
-	
+
 	private static WebDriver driver;
 	static String browser = "GC";
-	
+
 	private Base() {
-		
+
 	}
-	
+
 	// return driver instance
 	public static WebDriver getDriver() {
 		return driver;
 	}
-	
+
 	public static void start() {
 		try {
-			if(driver==null) {
+			if (driver == null) {
 				switch (browser) {
 				case "GC":
 					WebDriverManager.chromedriver().setup();
@@ -49,11 +49,13 @@ public class Base extends Logs {
 		}
 	}
 
-	
 	public static void end() {
 		try {
-			driver.quit();
-			Logs.debug("Driver closed successfully");
+			if (driver != null) {
+				driver.quit();
+				driver = null;
+				Logs.debug("Driver closed successfully");
+			}
 		} catch (Exception e) {
 			Logs.error(e.getMessage());
 		}

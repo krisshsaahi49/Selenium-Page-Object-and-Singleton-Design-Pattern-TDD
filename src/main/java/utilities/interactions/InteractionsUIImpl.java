@@ -16,9 +16,17 @@ public class InteractionsUIImpl implements Interactions {
 
 	WebDriverWait wait;
 
-	Actions actions = new Actions(Base.getDriver());
+	Actions actions;
 
-	JavascriptExecutor jsexec = (JavascriptExecutor) Base.getDriver();
+	JavascriptExecutor jsexec;
+
+	public InteractionsUIImpl() {
+		if (Base.getDriver() == null) {
+			throw new IllegalArgumentException("Driver must be set");
+		}
+		this.actions = new Actions(Base.getDriver());
+		this.jsexec = (JavascriptExecutor) Base.getDriver();
+	}
 
 	@Override
 	public void click(WebElement element) {
@@ -82,9 +90,10 @@ public class InteractionsUIImpl implements Interactions {
 	@Override
 	public void verify(String expected, String actual) {
 		try {
-			Assert.assertEquals(expected.toLowerCase() , actual.toLowerCase());
+			Assert.assertEquals(expected.toLowerCase(), actual.toLowerCase());
 		} catch (Exception e) {
-			Logs.error(e.getMessage());;
+			Logs.error(e.getMessage());
+			;
 		}
 	}
 
