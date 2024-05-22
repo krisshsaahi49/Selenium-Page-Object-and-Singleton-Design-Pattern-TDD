@@ -1,5 +1,6 @@
-utilities/Singleton.class
+utilities/ExtentDemo.class
+utilities/interactions/Interactions.class
+pages/portfolio/Homepage.class
+utilities/Logs.class
 utilities/Base.class
-utilities/Homepage.class
-pages/HomePage.class
-pages/BaseClass.class
+utilities/interactions/InteractionsUIImpl.class

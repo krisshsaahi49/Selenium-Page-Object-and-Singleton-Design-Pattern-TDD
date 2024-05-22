@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-20T15:46:51 EDT" name="Default suite" finished-at="2024-05-20T15:47:04 EDT" duration-ms="13565">
+  <suite started-at="2024-05-20T18:05:36 EDT" name="Default suite" finished-at="2024-05-20T18:05:37 EDT" duration-ms="225">
     <groups>
-      <group name="regression">
-        <method signature="HomePageTests.test1()[pri:0, instance:krisshPortfolio.HomePageTests@4fb61f4a]" name="test1" class="krisshPortfolio.HomePageTests"/>
-        <method signature="HomePageTests.test2()[pri:0, instance:krisshPortfolio.HomePageTests@4fb61f4a]" name="test2" class="krisshPortfolio.HomePageTests"/>
-      </group> <!-- regression -->
     </groups>
-    <test started-at="2024-05-20T15:46:51 EDT" name="Default test" finished-at="2024-05-20T15:47:04 EDT" duration-ms="13565">
-      <class name="krisshPortfolio.HomePageTests">
-        <test-method is-config="true" signature="init()[pri:0, instance:krisshPortfolio.HomePageTests@4fb61f4a]" started-at="2024-05-20T15:46:51 EDT" name="init" finished-at="2024-05-20T15:46:52 EDT" duration-ms="1060" status="PASS">
+    <test started-at="2024-05-20T18:05:36 EDT" name="Default test" finished-at="2024-05-20T18:05:37 EDT" duration-ms="225">
+      <class name="utilities.ExtentDemo">
+        <test-method is-config="true" signature="starttest()[pri:0, instance:utilities.ExtentDemo@12468a38]" started-at="2024-05-20T18:05:36 EDT" name="starttest" finished-at="2024-05-20T18:05:36 EDT" duration-ms="89" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- init -->
-        <test-method signature="test1()[pri:0, instance:krisshPortfolio.HomePageTests@4fb61f4a]" started-at="2024-05-20T15:46:52 EDT" name="test1" finished-at="2024-05-20T15:46:58 EDT" duration-ms="6169" status="PASS">
+        </test-method> <!-- starttest -->
+        <test-method signature="test1()[pri:0, instance:utilities.ExtentDemo@12468a38]" started-at="2024-05-20T18:05:36 EDT" name="test1" finished-at="2024-05-20T18:05:36 EDT" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test1 -->
-        <test-method signature="test2()[pri:0, instance:krisshPortfolio.HomePageTests@4fb61f4a]" started-at="2024-05-20T15:46:58 EDT" name="test2" finished-at="2024-05-20T15:47:04 EDT" duration-ms="6206" status="PASS">
+        <test-method signature="test2()[pri:0, instance:utilities.ExtentDemo@12468a38]" started-at="2024-05-20T18:05:36 EDT" name="test2" finished-at="2024-05-20T18:05:36 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test2 -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:krisshPortfolio.HomePageTests@4fb61f4a]" started-at="2024-05-20T15:47:04 EDT" name="teardown" finished-at="2024-05-20T15:47:04 EDT" duration-ms="107" status="PASS">
+        <test-method signature="test3()[pri:0, instance:utilities.ExtentDemo@12468a38]" started-at="2024-05-20T18:05:36 EDT" name="test3" finished-at="2024-05-20T18:05:36 EDT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- krisshPortfolio.HomePageTests -->
+        </test-method> <!-- test3 -->
+        <test-method is-config="true" signature="endtest()[pri:0, instance:utilities.ExtentDemo@12468a38]" started-at="2024-05-20T18:05:36 EDT" name="endtest" finished-at="2024-05-20T18:05:37 EDT" duration-ms="116" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endtest -->
+      </class> <!-- utilities.ExtentDemo -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
