@@ -32,6 +32,13 @@ public class HomePageTests {
 		Thread.sleep(5000);
 	}
 	
+	@Test(groups = {"regression"})
+	public void test3() throws InterruptedException {
+		homepage.launch(PORTFOLIO);
+		homepage.sendemail("test@outlook.com", "Automation Test", "Test from TDD automation framework");
+		Thread.sleep(5000);
+	}
+	
 	@AfterTest
 	public void teardown() {
 		Base.end();
