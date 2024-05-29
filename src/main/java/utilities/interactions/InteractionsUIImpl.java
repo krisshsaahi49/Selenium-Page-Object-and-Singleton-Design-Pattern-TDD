@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import utilities.Base;
+import utilities.ExtentReport;
 import utilities.Logs;
 
 public class InteractionsUIImpl implements Interactions {
@@ -51,6 +52,7 @@ public class InteractionsUIImpl implements Interactions {
 		try {
 			Base.getDriver().navigate().to(url);
 			Logs.debug("Launched " + url + " successfully");
+			ExtentReport.info("Launched url successfully : "+url);
 		} catch (Exception e) {
 			Logs.error(e.getMessage());
 		}
@@ -91,6 +93,7 @@ public class InteractionsUIImpl implements Interactions {
 	public void verify(String expected, String actual) {
 		try {
 			Assert.assertEquals(expected.toLowerCase(), actual.toLowerCase());
+			ExtentReport.pass("Expeced: "+expected+" matches Actual: "+actual);
 		} catch (Exception e) {
 			Logs.error(e.getMessage());
 			;

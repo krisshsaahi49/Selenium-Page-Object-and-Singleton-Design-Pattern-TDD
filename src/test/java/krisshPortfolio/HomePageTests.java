@@ -9,7 +9,7 @@ import utilities.Base;
 
 public class HomePageTests {
 	
-	public String PORTFOLIO = "https://krisshsaahi.dev";
+	public String PORTFOLIO = "https://krisshsaahi.dev/";
 	Homepage homepage;
 
 	@BeforeTest

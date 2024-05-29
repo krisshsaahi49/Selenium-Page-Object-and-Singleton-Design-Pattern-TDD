@@ -25,6 +25,7 @@ public class Base extends Logs {
 
 	public static void start() {
 		try {
+			ExtentReport.start();
 			if (driver == null) {
 				switch (browser) {
 				case "GC":
@@ -58,6 +59,7 @@ public class Base extends Logs {
 				driver.quit();
 				driver = null;
 				Logs.debug("Driver closed successfully");
+				ExtentReport.end();
 			}
 		} catch (Exception e) {
 			Logs.error(e.getMessage());

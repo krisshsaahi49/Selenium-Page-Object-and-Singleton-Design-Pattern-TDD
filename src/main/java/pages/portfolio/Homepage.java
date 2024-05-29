@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utilities.Base;
 import utilities.interactions.Interactions;
 import utilities.interactions.InteractionsUIImpl;
 
@@ -38,6 +39,7 @@ public class Homepage {
 	
 	public void launch(String url) {
 		interactions.navigate(url);
+		interactions.verify(Base.getDriver().getCurrentUrl(), url);
 	}
 
 	public void sendemail(String email, String subject, String message ) {
